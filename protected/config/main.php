@@ -113,13 +113,21 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
+			'connectionString' => 'mysql:host=72.3.204.212;dbname=517226_adminis',
+			'emulatePrepare' => true,
+			'username' => '517226_adminis',
+			'password' => 'Zamarripa83',
+			'charset' => 'utf8',
+		),
+		/*
+		'db'=>array(
 			'connectionString' => 'mysql:host=mysql51-016.wc2.dfw1.stabletransit.com;dbname=517226_adminis',
 			'emulatePrepare' => true,
 			'username' => '517226_adminis',
 			'password' => 'Zamarripa83',
 			'charset' => 'utf8',
 		),
-		
+		*/
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',
