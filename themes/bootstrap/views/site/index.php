@@ -6,11 +6,7 @@ $this->pageTitle='Administración / Iniciar Sesión';
 	<div>
 		<h1>Bienvenido a Administración</h1>
 	</div>
-<<<<<<< HEAD
-	<p>Aquí irá la información de introducción123.</p>
-=======
-	<p>Aquí irá la información de introducción.123123</p>
->>>>>>> develop
+	<p>Aquí irá la información de introducción.</p>
 	<div class="alert alert-success">
 		<div style="text-align:center;">
 			  <strong>Atrévete</strong> a descubrir tu verdadero potencial.
