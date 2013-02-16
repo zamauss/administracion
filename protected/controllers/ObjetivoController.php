@@ -188,11 +188,13 @@ class ObjetivoController extends Controller
 	 */
 	public function actionDelete($id)
 	{
+		echo $id;
 		if(Yii::app()->request->isPostRequest)
 		{
+			
 			// we only allow deletion via POST request
 			$this->loadModel($id)->delete();
-
+			
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 			if(!isset($_GET['ajax']))
 				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('site/index'));
@@ -286,15 +288,19 @@ class ObjetivoController extends Controller
 	{
 		$model=$this->loadModel($id);	
 			
-		//echo '<pre>'; print_r($model->attributes); echo '</pre>';
-		if($model->estatus_did == 1)
-		{
-			$model->estatus_did = 2;
-			$model->fechaCumplida = date('Y-m-d');			
+		if(!isset($_GET['tipoEstatus']))
+		{		
+			if($model->estatus_did == 1)
+			{
+				$model->estatus_did = 2;
+				$model->fechaCumplida = date('Y-m-d');			
+			}
+			else
+				$model->estatus_did = 1;
 		}
 		else
-			$model->estatus_did = 1;
-		//echo '<pre>'; print_r($model->attributes); echo '</pre>';
+			$model->estatus_did = $_GET['tipoEstatus'];
+		
 		if($model->save()){
 			$this->redirect(array('site/index'));
 		}
