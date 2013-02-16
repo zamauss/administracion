@@ -189,7 +189,8 @@
 																			</li>
 																			<li>
 																				<?php
-																					echo CHtml::link('<i class="icon-trash"></i> Actualizar', array('objetivo/delete','id'=>$objetivo->id, 'objetivoGeneral_did'=>$objetivo->objetivoGeneral_did));
+																					echo CHtml::link('<i class="icon-trash"></i> Eliminar', 
+																					array('objetivo/cambiarestatus','id'=>$objetivo->id, 'tipoEstatus' => 3));
 																				?>
 																			</li>
 																			<li>
@@ -484,7 +485,7 @@
 												    </div>
 <?php /* -------------------- Contenido de todas actividades  -----------------------*/ ?>
 												    <div class="tab-pane" id="tab<?php echo $cadenaLimpia; ?>3">
-												      <?php $objetivosTodos = Objetivo::model()->findAll('objetivoGeneral_did = ' . $objGral->id . ' && responsable_aid = ' . $persona->id . ' || objetivoGeneral_did = ' . $objGral->id . ' && persona_aid = ' . $persona->id . '   ORDER BY numero ASC'); ?>
+												      <?php $objetivosTodos = Objetivo::model()->findAll('objetivoGeneral_did = ' . $objGral->id . ' && responsable_aid = ' . $persona->id . ' || objetivoGeneral_did = ' . $objGral->id . ' && estatus_did != 3 && persona_aid = ' . $persona->id . '   ORDER BY numero ASC'); ?>
 												      <table class="table table-striped" style="font-size:8pt;">
 								         				<caption><h4>Listado de todos los objetivos</h4></caption>
 								         				<thead class="thead">
