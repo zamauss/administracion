@@ -70,12 +70,12 @@
 							  <div class="tab-content">
 							  	<?php
 							  		$cogDesc = 1;
-							  		$pestanaActiva = 'active';
+							  		$pestanaActiva = ' active';
 							  		foreach ($objetivosGenerales as $objGral)
 							  		{
 							  			//$objetivos = Objetivo::model()->findAll('objetivoGeneral_did = ' . $objGral->id . ' && responsable_aid = ' . $persona->id. ' || persona_aid = ' . $persona->id . ' && objetivoGeneral_did = ' . $objGral->id);
 							  	?>
-									  		<div class="tab-pane <?php echo $pestanaActiva; ?>" id="tabOE<?php echo $cogDesc; ?>">									  			
+									  		<div class="tab-pane<?php echo $pestanaActiva; ?>" id="tabOE<?php echo $cogDesc; ?>">									  			
 									  			<div class="well">									  				
 									  				<h3>
 									  					<?php 									  						
@@ -141,13 +141,13 @@
 												?>										  
 								  			<div class="tabbable" style="margin-top:10px;"> <!-- Only required for left/right tabs -->
 												  <ul class="nav nav-tabs">												  	
-												    <li class="active"><a href="#tab<?php echo $cadenaLimpia; ?>1" data-toggle="tab">Pendientes</a></li>
-												    <li><a href="#tab<?php echo $cadenaLimpia; ?>2" data-toggle="tab">Realizadas</a></li>
-												    <li><a href="#tab<?php echo $cadenaLimpia; ?>3" data-toggle="tab">Todas</a></li>
+												    <li class="active"><a href="#tab<?php echo $cadenaLimpia; ?>p1" data-toggle="tab">Pendientes</a></li>
+												    <li><a href="#tab<?php echo $cadenaLimpia; ?>p2" data-toggle="tab">Realizadas</a></li>
+												    <li><a href="#tab<?php echo $cadenaLimpia; ?>p3" data-toggle="tab">Todas</a></li>
 												  </ul>
 												  <div class="tab-content">
 <?php /* -------------------- Contenido de las actividades pendientes -----------------------*/ ?>
-												    <div class="tab-pane active" id="tab<?php echo $cadenaLimpia; ?>1">
+												    <div class="tab-pane active" id="tab<?php echo $cadenaLimpia; ?>p1">
 												      <?php $objetivosPendientes = Objetivo::model()->findAll('objetivoGeneral_did = ' . $objGral->id . ' && estatus_did = 1 && responsable_aid = ' . $persona->id . ' || objetivoGeneral_did = ' . $objGral->id . ' && estatus_did = 1 && persona_aid = ' . $persona->id . ' ORDER BY numero ASC'); ?>
 												      <table class="table table-striped" style="font-size:8pt;">
 								         				<caption><h4>Listado de objetivos pendientes</h4></caption>
@@ -329,7 +329,7 @@
 									         			<div style="height:100px;"></div>
 												    </div>
 <?php /* -------------------- Contenido de las actividades realizadas -----------------------*/ ?>
-												    <div class="tab-pane" id="tab<?php echo $cadenaLimpia; ?>2">
+												    <div class="tab-pane" id="tab<?php echo $cadenaLimpia; ?>p2">
 												      <?php $objetivosRealizados = Objetivo::model()->findAll('objetivoGeneral_did = ' . $objGral->id . ' && estatus_did = 2 && responsable_aid = ' . $persona->id . ' || objetivoGeneral_did = ' . $objGral->id . ' && estatus_did = 2 && persona_aid = ' . $persona->id . ' ORDER BY numero ASC'); ?>
 												      <table class="table table-striped" style="font-size:8pt;">
 								         				<caption><h4>Listado de objetivos realizados</h4></caption>
@@ -484,7 +484,7 @@
 									         			<div style="height:100px;"></div>
 												    </div>
 <?php /* -------------------- Contenido de todas actividades  -----------------------*/ ?>
-												    <div class="tab-pane" id="tab<?php echo $cadenaLimpia; ?>3">
+												    <div class="tab-pane" id="tab<?php echo $cadenaLimpia; ?>p3">
 												      <?php $objetivosTodos = Objetivo::model()->findAll('objetivoGeneral_did = ' . $objGral->id . ' && responsable_aid = ' . $persona->id . ' || objetivoGeneral_did = ' . $objGral->id . ' && estatus_did != 3 && persona_aid = ' . $persona->id . '   ORDER BY numero ASC'); ?>
 												      <table class="table table-striped" style="font-size:8pt;">
 								         				<caption><h4>Listado de todos los objetivos</h4></caption>
