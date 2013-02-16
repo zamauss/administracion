@@ -38,7 +38,7 @@
 						'altFormat'=>'dd-mm-yy', 
 						'changeMonth'=>'true', 
 						'changeYear'=>'true', 
-						'yearRange'=>'2010:2012', 
+						'yearRange'=>'2013:2015', 
 						'showOn'=>'both',
 						'buttonText'=>'<i class="icon-calendar"></i>'
 					),
@@ -134,7 +134,7 @@
 					'altFormat'=>'dd-mm-yy', 
 					'changeMonth'=>'true', 
 					'changeYear'=>'true', 
-					'yearRange'=>'2010:2012', 
+					'yearRange'=>'2013:2015', 
 					'showOn'=>'both',
 					'buttonText'=>'<i class="icon-calendar"></i>'
 				),
