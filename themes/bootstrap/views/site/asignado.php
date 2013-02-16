@@ -188,6 +188,11 @@
 																				?>
 																			</li>
 																			<li>
+																				<?php
+																					echo CHtml::link('<i class="icon-trash"></i> Actualizar', array('objetivo/delete','id'=>$objetivo->id, 'objetivoGeneral_did'=>$objetivo->objetivoGeneral_did));
+																				?>
+																			</li>
+																			<li>
 																				<?php echo CHtml::link('<i class="icon-list-alt"></i> Detalle Objetivo', array('objetivo/view', 'id'=>$objetivo->id)); ?>
 																			</li>
 																			<li class="divider"></li>
