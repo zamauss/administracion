@@ -11,8 +11,6 @@ $this->pageTitle='Administración / Iniciar Sesión';
 		<div style="text-align:center;">
 			  <strong>Atrévete</strong> a descubrir tu verdadero potencial.
 		</div>
-	</div>
-	<a class="btn btn-success btn-large" href="http://administracion.uss.mx/index.php/site/login">
-      Iniciar Sesión
-    </a>
+	</div>	
+    <?php echo CHtml::button('Iniciar Sesión', array('submit' => array('site/login'), 'class' => 'btn btn-success btn-large')); ?>
 </div>
