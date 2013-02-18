@@ -5,7 +5,7 @@
 	$this->breadcrumbs=array(
 		'Panel Principal',
 	);
-	
+	1235
 	$usuario = Usuario::model()->find('usuario="' . Yii::app()->user->name .'"');
 	$persona = Persona::model()->find('usuario_did = ' . $usuario->id);
 	$planeacionesInternas = array();
@@ -15,7 +15,7 @@
 	{
 		if($postitNuevo->estatus_did == 1)
 			$postitNuevos++;
-	}												  
+	}
 ?>
 <?php /* -------------------- Contenido de las planeaciones o proyectos -----------------------*/ ?>
 
