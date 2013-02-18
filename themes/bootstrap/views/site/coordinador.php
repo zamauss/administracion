@@ -5,7 +5,7 @@
 	$this->breadcrumbs=array(
 		'Panel Principal',
 	);
-	123456567
+	12345656756
 	$usuario = Usuario::model()->find('usuario="' . Yii::app()->user->name .'"');
 	$persona = Persona::model()->find('usuario_did = ' . $usuario->id);
 	$planeacionesInternas = array();
