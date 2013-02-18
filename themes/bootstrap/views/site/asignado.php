@@ -5,7 +5,7 @@
 	$this->breadcrumbs=array(
 		'Panel Principal',
 	);
-		
+	
 	$usuario = Usuario::model()->find('usuario="' . Yii::app()->user->name .'"');
 	$persona = Persona::model()->find('usuario_did = ' . $usuario->id);
 	$departamento = Departamento::model()->find('id = ' . $persona->departamento_did);
@@ -693,7 +693,7 @@
 						    <div id="collapseOE<?php echo $contador; ?>" class="accordion-body collapse">
 						      <div class="accordion-inner">
 			         			<table class="table table-striped" style="font-size:8pt;">
-			         				<caption><h4>Listado de objetivos</h4></caption>
+			         				<caption><h4>Listado de objetivos de otros proyectos</h4></caption>
 			         				<thead class="thead">
 			         					<tr>
 			         						<td><strong>Acciones</strong></td>
