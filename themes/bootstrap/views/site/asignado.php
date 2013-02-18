@@ -5,7 +5,7 @@
 	$this->breadcrumbs=array(
 		'Panel Principal',
 	);
-	1
+	
 	$usuario = Usuario::model()->find('usuario="' . Yii::app()->user->name .'"');
 	$persona = Persona::model()->find('usuario_did = ' . $usuario->id);
 	$departamento = Departamento::model()->find('id = ' . $persona->departamento_did);
