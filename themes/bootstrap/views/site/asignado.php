@@ -5,7 +5,7 @@
 	$this->breadcrumbs=array(
 		'Panel Principal',
 	);
-	1
+	
 	$usuario = Usuario::model()->find('usuario="' . Yii::app()->user->name .'"');
 	$persona = Persona::model()->find('usuario_did = ' . $usuario->id);
 	$departamento = Departamento::model()->find('id = ' . $persona->departamento_did);
@@ -18,7 +18,7 @@
 			$postitNuevos++;
 	}
 ?>
-
+1
 <div class="tabbable"> <!-- Only required for left/right tabs -->
   <ul class="nav nav-tabs">
     <li class="active"><a href="#tab1" data-toggle="tab">Planeaciones o proyectos</a></li>    
