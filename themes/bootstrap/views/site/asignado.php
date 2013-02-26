@@ -18,7 +18,7 @@
 			$postitNuevos++;
 	}
 ?>
-1
+
 <div class="tabbable"> <!-- Only required for left/right tabs -->
   <ul class="nav nav-tabs">
     <li class="active"><a href="#tab1" data-toggle="tab">Planeaciones o proyectos</a></li>    
