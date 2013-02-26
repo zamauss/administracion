@@ -158,7 +158,7 @@
 				//echo '<pre>'; print_r($usuarioActual->tipoUsuario); echo '</pre>';
 				$this->widget('zii.widgets.CMenu',array(
 					'items'=>array(
-						array('label'=>'Bienvenido ' . Yii::app()->user->name, 'url'=>array('usuario/miperfil','id'=> $usuarioActual->id), 'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Bienvenido ' . Yii::app()->user->name, 'url'=>array('usuario/miperfil' . $usuarioActual->id), 'visible'=>!Yii::app()->user->isGuest),
 						array('label'=>'Cerrar Sesión', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest, 'htmlOptions'=>array('class'=>'btn'))
 					),
 					'htmlOptions'=>array(
